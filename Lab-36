@@ -1,0 +1,43 @@
+"""
+Day 36 Activity: Vectors
+Tasks:
+1) Create feature and weight vectors
+2) Compute vector addition and scalar multiplication
+3) Compute norms and inspect shapes
+"""
+
+import numpy as np
+import pandas as pd
+df=pd.read_csv("python\day36_vectors.csv")
+# Provided vectors (edit if you want different values)
+feature = np.array([30.0, 50.0, 10.0])
+weights = np.array([0.05, 0.8, -0.1])
+
+# TODO: Compute addition, scaling, and norms
+# Vector addition
+addition = feature + weights
+#DF addition
+df["addition"]=df["feature1"]+df["feature2"]+df["feature3"]+df["weight1"]+df["weight2"]+df["weight3"]
+
+# Scalar vector
+scalar=0.5*feature
+
+
+#Scalar DF
+df["scalarfeature1"]=0.5*df["feature1"]
+
+#Norms vector
+norm_feature=np.linalg.norm(feature)
+norm_weights=np.linalg.norm(weights)
+
+#Norms DF
+df["norm_feature"]=np.linalg.norm(df[["feature1","feature2","feature3"]])
+df["norm_weights"]=np.linalg.norm(df[["weight1","weight2","weight3"]])
+
+print("feature shape:", feature.shape)
+print("weights shape:", weights.shape)
+print("addition shape:", addition.shape)
+print("scalar shape:", scalar.shape) 
+print("norm_feature:", norm_feature)
+print("norm_weights:", norm_weights)
+print(df.head())
