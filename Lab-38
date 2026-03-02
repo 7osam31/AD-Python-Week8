@@ -21,7 +21,12 @@ W = np.array([
 
 # TODO: Compute Y = X @ W
 Y = X @ W
+# Transpose 
+W_transpose = W.T
+X_transpose = X.T
 # TODO: Print shapes
 print("X shape:", X.shape) #(2, 3)
 print("W shape:", W.shape) #(3, 2)
 print("Y shape:", Y.shape) #(2, 2)
+print("W transpose shape:", W_transpose.shape) #(2, 3)
+print("X transpose shape:", X_transpose.shape) #(3, 2)
