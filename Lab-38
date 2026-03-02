@@ -1,0 +1,27 @@
+"""""
+Day 38 Activity: Matrices
+Tasks:
+1) Create data matrix X and weight matrix W
+2) Compute X @ W
+3) Inspect shapes and transpose
+"""
+
+import numpy as np
+
+# Provided matrices (edit if you want different values)
+X = np.array([
+    [1.0, 2.0, 3.0],
+    [4.0, 5.0, 6.0],
+])
+W = np.array([
+    [0.1, -0.2],
+    [0.4, 0.0],
+    [-0.3, 0.5],
+])
+
+# TODO: Compute Y = X @ W
+Y = X @ W
+# TODO: Print shapes
+print("X shape:", X.shape) #(2, 3)
+print("W shape:", W.shape) #(3, 2)
+print("Y shape:", Y.shape) #(2, 2)
