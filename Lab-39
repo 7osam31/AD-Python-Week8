@@ -1,0 +1,26 @@
+"""
+Day 39 Activity: Broadcasting
+Tasks:
+1) Normalize matrix by row using broadcasting
+2) Verify each row has unit norm
+"""
+import numpy as np
+
+# المصفوفة المطلوبة
+X = np.array([
+    [3.0, 4.0],
+    [1.0, 2.0],
+    [0.0, 5.0],
+])
+#row norms
+row_norms = np.linalg.norm(X, axis=1, keepdims=True)
+
+#x normlize by row
+X_normalized = X / row_norms
+
+#verfication
+verification = np.linalg.norm(X_normalized, axis=1)
+#print results
+print("Row Norms :", row_norms.flatten())
+print("Normalized Matrix:\n", X_normalized)
+print("Verification :", verification)
